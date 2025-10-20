@@ -3970,4 +3970,10 @@ input, select, textarea {
     #intro p {
         font-size: 1em;
     }
+	 /* Ajuste del fondo */
+    #intro.fullscreen {
+        min-height: auto;      /* permite que la sección crezca según el contenido */
+        height: auto;
+        padding-bottom: 200px;  /* agrega un pequeño espacio extra debajo si quieres */
+    }
 }
