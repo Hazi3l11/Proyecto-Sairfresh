@@ -1832,10 +1832,10 @@ input, select, textarea {
 		-ms-transition: border-color 0.2s ease;
 		transition: border-color 0.2s ease;
 		background-color: transparent;
-		border: solid 1px !important;
-		border-color: #13370b !important;
+		border: solid 1px;
+		border-color: #13370b;
 		border-radius: 3em;
-		color:#13370b  !important;
+		color:#13370b;
 		cursor: pointer;
 		display: inline-block;
 		font-size: 0.6em;
@@ -1850,7 +1850,19 @@ input, select, textarea {
 		text-decoration: none;
 		text-transform: uppercase;
 		white-space: nowrap;
+	} 
+	#one .button {
+
+    border-color: #f0f0db ;      /* color del borde */
+    color: #f0f0db ;             /* color del texto */
+}
+	#one .button:hover {
+		border-color: aliceblue;
+		
 	}
+
+
+	
 
 		input[type="submit"]:after,
 		input[type="reset"]:after,
@@ -1945,7 +1957,7 @@ input, select, textarea {
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			border-color: rgba(112, 46, 204, 0.55) !important;
+			border-color: rgba(112, 46, 204, 0.55);
 		}
 
 			input[type="submit"]:hover:after,
@@ -3248,11 +3260,11 @@ input, select, textarea {
 		}
 
 		.wrapper.style2 {
-			background-color: #5052b5;
+			background-color: #8b4d12;
 		}
 
 		.wrapper.style2-alt {
-			background-color: #3e4094;
+			background-color: #8b4d12;
 		}
 
 		.wrapper.style3 {
@@ -3370,7 +3382,7 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
-		background-color: #5e42a6;
+		background-color: #13370b;
 		cursor: default;
 		padding: 1.75em 2em;
 	}
@@ -3463,6 +3475,14 @@ input, select, textarea {
 		}
 
 /* Wrapper (main) */
+
+	#main {
+		background-color: #f0f0db;
+	}
+	#main h1,
+	#main p {
+    	color: #13370b; /* ejemplo de texto oscuro sobre fondo crema */
+	}
 
 	#sidebar + #wrapper {
 		margin-left: 18em;
