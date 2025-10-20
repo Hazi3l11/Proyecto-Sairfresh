@@ -1851,19 +1851,33 @@ input, select, textarea {
 		text-transform: uppercase;
 		white-space: nowrap;
 	} 
+	/* Configuracion para boton de la seccion #intro*/
+	#intro .button {
+		color: #13370b;;
+	}
+	#intro .button:hover {
+		border-color: #5e42a6;
+		color: #5e42a6;
+	}
+	/* Configuracion para boton de la seccion #one*/
 	#one .button {
 
     border-color: #f0f0db ;      /* color del borde */
     color: #f0f0db ;             /* color del texto */
 }
 	#one .button:hover {
-		border-color: aliceblue;
-		
+		border-color: #d39e6c;
+		color: #d39e6c;
 	}
-
-
-	
-
+		/* Configuracion para boton de la seccion #two*/
+	#two .button {
+		border-color: #f0f0db;
+		color:#f0f0db;
+	}
+	#two .button:hover {
+		border-color: #b74e91;
+		color: #b74e91;
+	}
 		input[type="submit"]:after,
 		input[type="reset"]:after,
 		input[type="button"]:after,
@@ -3268,11 +3282,11 @@ input, select, textarea {
 		}
 
 		.wrapper.style3 {
-			background-color: #b74e91;
+			background-color: #450354;
 		}
 
 		.wrapper.style3-alt {
-			background-color: #953d75;
+			background-color: #450354;
 		}
 
 		.wrapper.fullscreen {
@@ -3899,16 +3913,24 @@ input, select, textarea {
 }
 
 /* Logo */
+/* Contenedor flex para alinear logo y texto */
+.intro-flex {
+    display: flex;
+    align-items: center;  /* centra verticalmente el logo con el texto */
+    gap: 30px;            /* espacio entre logo y texto */
+}
+
+/* Logo */
 .intro-logo {
     width: 550px;   /* ajusta el tamaño del logo */
     height: auto;
     opacity: 0;
     animation: fadeIn 2s forwards;
 
-	/* Ajustes manuales */
-    position: relative; /* relativo al contenedor flex */
-    top: -50px;          /* mueve verticalmente */
-    left: 150px;         /* mueve horizontalmente */
+    /* Ajustes manuales solo para escritorio */
+    position: relative; 
+    top: -50px;
+    left: 150px;
 }
 
 /* Animación fadeIn */
@@ -3928,16 +3950,24 @@ input, select, textarea {
     color: #13370b;
 }
 
-/* Responsivo: en pantallas pequeñas se apila el logo encima del texto */
+/* --- Versión móvil --- */
 @media screen and (max-width: 736px) {
     .intro-flex {
-        flex-direction: column;
-        align-items: flex-start; /* puedes centrar con center si quieres */
+        flex-direction: column;   /* texto y logo en columna */
+        align-items: center;      /* centra horizontalmente todo */
+        text-align: center;
         gap: 15px;
+    }
+
+    .intro-logo {
+        width: 250px;             /* reduce el tamaño */
+        top: 0;                   /* quita el desplazamiento vertical */
+        left: 0;                  /* quita el desplazamiento horizontal */
+        margin-top: 10px;         /* agrega espacio debajo del texto */
+        position: static;         /* evita que se desplace fuera del flujo */
     }
 
     #intro p {
         font-size: 1em;
     }
 }
-
