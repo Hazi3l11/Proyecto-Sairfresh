@@ -2628,6 +2628,11 @@ input, select, textarea {
 			.image.fit img {
 				width: 100%;
 			}
+			.image.fit.image-quienes img{
+				display: block;
+				margin: 0 auto 2em auto; /* centra la imagen */
+				width: 80%;
+			}	
 
 		.image.main {
 			display: block;
@@ -2638,6 +2643,36 @@ input, select, textarea {
 			.image.main img {
 				width: 100%;
 			}
+
+		/*Image jabones*/
+		.galeria-jabones {
+	display: flex;
+	justify-content: center; /* centra horizontalmente */
+	gap: 20px; /* espacio entre imágenes */
+	flex-wrap: wrap; /* permite que se acomoden en varias filas en pantallas pequeñas */
+	margin-bottom: 2em;
+		}
+
+.galeria-jabones .image.fit {
+	width: 45%; /* cada imagen ocupa casi la mitad */
+	margin: 0; /* elimina margen extra */
+}
+
+.galeria-jabones img {
+	border-radius: 0.25em;
+	display: block;
+	height: 550px;
+	object-fit: cover;
+	width: 100%;
+}
+
+/* Responsivo para móvil */
+@media screen and (max-width: 736px) {
+	.galeria-jabones .image.fit {
+		width: 100%; /* en móviles, una debajo de otra */
+	}
+}
+
 
 /* List */
 
