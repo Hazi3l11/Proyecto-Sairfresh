@@ -195,6 +195,13 @@ input, select, textarea {
 			position: relative;
 			padding-bottom: 0.35em;
 		}
+		h1.major.a{
+			margin: 0 0 1.3em 0;
+			position:relative;
+			padding-bottom: 0.35em;
+			font-size: 2.5em;
+			color:#5e42a6 !important;
+		}
 
 			h1.major:after {
 				background-image: -moz-linear-gradient(to right, #5e42a6, #b74e91);
@@ -216,6 +223,12 @@ input, select, textarea {
 
 	h2 {
 		font-size: 1.75em;
+	}
+	h2.minor{
+		color: #444;
+	}
+	h2.minor.a{
+		color:#444;
 	}
 
 	h3 {
@@ -2644,8 +2657,8 @@ input, select, textarea {
 				width: 100%;
 			}
 
-		/*Image jabones*/
-		.galeria-jabones {
+		/*Image productos*/
+		.galeria-productos {
 	display: flex;
 	justify-content: center; /* centra horizontalmente */
 	gap: 20px; /* espacio entre imágenes */
@@ -2653,12 +2666,12 @@ input, select, textarea {
 	margin-bottom: 2em;
 		}
 
-.galeria-jabones .image.fit {
+.galeria-productos .image.fit {
 	width: 45%; /* cada imagen ocupa casi la mitad */
 	margin: 0; /* elimina margen extra */
 }
 
-.galeria-jabones img {
+.galeria-productos img {
 	border-radius: 0.25em;
 	display: block;
 	height: 550px;
@@ -2668,11 +2681,17 @@ input, select, textarea {
 
 /* Responsivo para móvil */
 @media screen and (max-width: 736px) {
-	.galeria-jabones .image.fit {
+	.galeria-productos .image.fit {
 		width: 100%; /* en móviles, una debajo de otra */
 	}
 }
 
+.descripcion-producto {
+	text-align:justify;
+	margin-top: 10px;
+	font-size: 1em;
+	color: #444;
+}
 
 /* List */
 
@@ -4018,6 +4037,6 @@ input, select, textarea {
     #intro.fullscreen {
         min-height: auto;      /* permite que la sección crezca según el contenido */
         height: auto;
-        padding-bottom: 200px;  /* agrega un pequeño espacio extra debajo si quieres */
+        padding-bottom: 300px;  /* agrega un pequeño espacio extra debajo si quieres */
     }
 }
